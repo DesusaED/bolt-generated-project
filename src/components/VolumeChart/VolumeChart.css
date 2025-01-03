@@ -1,0 +1,60 @@
+.volume-chart-container {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .volume-chart-container h3 {
+      color: #64ffda;
+      margin: 0 0 10px 0;
+      font-size: 1em;
+    }
+
+    .volume-chart {
+      height: 100px;
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .volume-info-box {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 20px;
+      margin-top: 15px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .volume-info-box h3 {
+      color: #64ffda;
+      margin: 0 0 15px 0;
+      font-size: 1.2em;
+    }
+
+    .info-section {
+      margin-bottom: 15px;
+    }
+
+    .info-section:last-child {
+      margin-bottom: 0;
+    }
+
+    .info-section h4 {
+      color: #64ffda;
+      margin: 0 0 8px 0;
+      font-size: 1em;
+    }
+
+    .info-section p {
+      color: #ffffff;
+      margin: 5px 0;
+      font-size: 0.9em;
+      line-height: 1.4;
+    }

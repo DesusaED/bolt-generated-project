@@ -1,0 +1,244 @@
+.bitcoin-price-container {
+      width: 40%;
+      color: white;
+      padding: 20px;
+      box-sizing: border-box;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin: 0 10px;
+    }
+
+    .bitcoin-price-header {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 20px;
+    }
+
+    .bitcoin-price-main {
+      display: flex;
+      align-items: center;
+      margin-bottom: 10px;
+    }
+
+    .bitcoin-price-symbol {
+      font-size: 2em;
+      margin-right: 10px;
+      color: #00D1FF;
+    }
+
+    .bitcoin-price-title {
+      font-size: 2.5em;
+      font-weight: bold;
+      margin: 0;
+    }
+
+    .bitcoin-price-details {
+      display: flex;
+      align-items: center;
+      font-size: 1.3em;
+    }
+
+    .bitcoin-price-usd {
+      margin-right: 10px;
+    }
+
+    .bitcoin-price-change {
+      color: #2ECC71;
+      font-size: 1.3em;
+    }
+
+    .bitcoin-market-info {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .bitcoin-market-section {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      margin-bottom: 20px;
+      width: 100%;
+      box-sizing: border-box;
+      position: relative;
+    }
+
+    .bitcoin-market-section h2 {
+      font-size: 1.3em;
+      margin-bottom: 10px;
+    }
+
+    .bitcoin-market-low-high-container {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    .bitcoin-market-low-high-labels {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+    }
+
+    .bitcoin-market-low {
+      color: #E74C3C;
+    }
+
+    .bitcoin-market-high {
+      color: #2ECC71;
+    }
+
+    .bitcoin-market-progress-bar {
+      width: 100%;
+      height: 8px;
+      background-color: rgba(255, 255, 255, 0.2);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+
+    .bitcoin-market-progress {
+      height: 100%;
+      background: linear-gradient(to right, #E74C3C, #2ECC71);
+      border-radius: 4px;
+    }
+
+    .bitcoin-market-grid {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 10px;
+      justify-content: space-between;
+      width: 100%;
+      overflow: hidden;
+    }
+
+    .bitcoin-market-item {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+      flex: 1;
+      min-width: 0;
+      overflow: hidden;
+    }
+
+    .bitcoin-market-item span {
+      font-size: 0.9em;
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap;
+    }
+
+    .bitcoin-market-item span:last-child {
+      position: relative;
+      cursor: pointer;
+    }
+
+    .btc-market-section-bottom {
+      margin-top: 20px;
+    }
+
+    .btc-market-section-bottom .bitcoin-market-item span:first-child {
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .btc-market-section-bottom .bitcoin-market-item span:last-child {
+      margin-left: 5px;
+    }
+
+    .bitcoin-market-section::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(255, 255, 255, 0.05);
+      pointer-events: none;
+      border-radius: 10px;
+    }
+
+    .interval-selector {
+      display: flex;
+      gap: 10px;
+      margin-top: 10px;
+    }
+
+    .interval-button {
+      padding: 5px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      background: rgba(255, 255, 255, 0.1);
+      color: white;
+      border-radius: 5px;
+      cursor: pointer;
+      backdrop-filter: blur(5px);
+      transition: all 0.3s ease;
+    }
+
+    .interval-button:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .interval-button.active {
+      background: rgba(255, 255, 255, 0.3);
+      border-color: rgba(255, 255, 255, 0.5);
+    }
+
+    .tool-button {
+      background: rgba(255, 255, 255, 0.05);
+      color: #00D1FF;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      text-align: center;
+      margin-top: 10px;
+      display: inline-block;
+    }
+
+    .tool-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .open-chart-button {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      color: #00D1FF;
+      border: none;
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.2em;
+      z-index: 10;
+    }
+
+    .open-chart-button:hover {
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    @media (max-width: 768px) {
+      .bitcoin-price-container {
+        width: 100%;
+        padding: 10px;
+        margin: 0;
+      }
+      .bitcoin-market-grid {
+        flex-wrap: wrap;
+      }
+      .bitcoin-market-item {
+        width: 48%;
+      }
+    }

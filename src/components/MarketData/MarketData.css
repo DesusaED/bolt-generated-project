@@ -1,0 +1,40 @@
+good.
+.market-hud {
+      background: rgba(255, 255, 255, 0.1);
+      border-radius: 10px;
+      padding: 15px;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      color: white;
+      margin-top: 20px;
+      width: 90%;
+      max-width: 800px;
+      box-sizing: border-box;
+      padding-left: 20px;
+      display: flex;
+      flex-direction: column;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .market-hud h2 {
+      font-size: 1.2em;
+      margin-bottom: 10px;
+      text-align: center;
+      color: #ccff00;
+      text-shadow: 0 0 5px rgba(204, 255, 0, 0.8);
+    }
+
+    .market-item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 5px;
+      font-size: 0.9em;
+      align-items: center;
+    }
+
+    .market-item span {
+      font-weight: bold;
+    }

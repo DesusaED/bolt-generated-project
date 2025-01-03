@@ -1,0 +1,17 @@
+.currency-chart-container {
+      width: 100%;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 15px;
+      margin-top: 15px;
+      margin-bottom: 10px; /* Reduced margin-bottom */
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
+    }
+
+    .currency-chart {
+      height: 300px;
+      width: 100%;
+      box-sizing: border-box;
+    }

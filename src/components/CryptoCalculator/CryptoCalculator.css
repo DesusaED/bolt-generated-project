@@ -1,0 +1,176 @@
+.calculator-container {
+      position: relative;
+      width: 100%;
+      margin-top: 0px;
+      margin-bottom: 20px;
+      box-sizing: border-box;
+      padding-left: 0px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .calculator-frame {
+      text-align: left;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.05);
+      box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      color: white;
+      box-sizing: border-box;
+      width: 100%;
+      border-radius: 10px;
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .calculator-frame h2 {
+      font-size: 1.5em;
+      margin-bottom: 15px;
+      color: #FFD700;
+      display: none;
+    }
+
+    .input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 10px;
+    }
+
+    .input-group label {
+      margin-bottom: 5px;
+      display: flex;
+      align-items: center;
+    }
+
+    .input-group input,
+    .input-group select {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      color: black;
+      margin-bottom: 5px;
+    }
+
+    .result {
+      margin-top: 10px;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 20px;
+      margin-left: 5px;
+    }
+
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: #ccc;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 16px;
+      width: 16px;
+      left: 2px;
+      bottom: 2px;
+      background-color: white;
+      -webkit-transition: .4s;
+      transition: .4s;
+    }
+
+    input:checked + .slider {
+      background-color: #00D1FF;
+    }
+
+    input:focus + .slider {
+      box-shadow: 0 0 1px #00D1FF;
+    }
+
+    input:checked + .slider:before {
+      -webkit-transform: translateX(20px);
+      -ms-transform: translateX(20px);
+      transform: translateX(20px);
+    }
+
+    .slider.round {
+      border-radius: 20px;
+    }
+
+    .slider.round:before {
+      border-radius: 50%;
+    }
+
+    .crypto-options {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-bottom: 10px;
+      justify-content: center;
+    }
+
+    .crypto-options label {
+      margin-bottom: 5px;
+      width: 100%;
+      text-align: center;
+    }
+
+    .crypto-button {
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #00D1FF;
+      padding: 10px 15px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease, box-shadow 0.3s ease;
+      text-align: center;
+      min-width: 80px;
+      flex: 1;
+      margin: 5px;
+      box-shadow: 0 0 5px rgba(0, 209, 255, 0.3);
+    }
+
+    .crypto-button:hover,
+    .crypto-button.selected {
+      background-color: rgba(255, 255, 255, 0.1);
+      box-shadow: 0 2px 8px rgba(0, 209, 255, 0.5);
+    }
+
+    .crypto-price {
+      font-size: 0.8em;
+      color: #ccc;
+    }
+
+    .input-row {
+      display: flex;
+      gap: 10px;
+      margin-bottom: 10px;
+    }
+
+    .input-row .input-group {
+      flex: 1;
+    }
+
+    .input-row .input-group.investment-group {
+      display: flex;
+      flex-direction: column;
+      flex: 1.5;
+    }

@@ -1,0 +1,79 @@
+.affiliate-container {
+      width: 100%;
+      display: flex;
+      gap: 10px;
+      justify-content: center;
+      margin: 15px 0;
+      padding: 10px;
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      box-sizing: border-box;
+      overflow-x: auto;
+      flex-wrap: nowrap;
+      margin-left: -10px;
+      margin-top: -15px; /* Reduced margin-top further */
+    }
+
+    .affiliate-card {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: 8px;
+      padding: 12px;
+      height: auto;
+      flex: 0 0 auto;
+      width: auto;
+      text-align: center;
+      color: white;
+      text-decoration: none;
+      transition: all 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      cursor: pointer;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      margin-right: 10px;
+      margin-bottom: 0;
+    }
+
+    .affiliate-card:hover {
+      transform: translateY(-3px);
+      background: rgba(255, 255, 255, 0.15);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-color: #00D1FF;
+    }
+
+    .affiliate-icon {
+      font-size: 1.5em;
+      margin-bottom: 8px;
+    }
+
+    .affiliate-card h3 {
+      color: #00D1FF;
+      margin: 5px 0;
+      font-size: 1em;
+    }
+
+    .affiliate-card p {
+      font-size: 0.8em;
+      opacity: 0.8;
+      margin: 0;
+    }
+
+    .rotating-button {
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .static-button {
+      flex: 0 0 auto;
+      min-width: 120px;
+    }
+
+    .scrolling-text-frame {
+      width: 100%;
+      margin-bottom: 10px;
+      margin-top: 10px;
+    }

@@ -1,0 +1,112 @@
+.app-container {
+      display: flex;
+      flex-direction: column;
+      width: calc(100% - 40px); /* Subtract padding from total width */
+      position: relative;
+      box-sizing: border-box;
+      padding: 0 20px; /* Add padding on both sides */
+      overflow-x: hidden;
+      min-height: 100vh;
+      margin: 0 auto; /* Center the container */
+    }
+
+    .header {
+      color: #FFD700;
+      display: flex;
+      align-items: center;
+      padding: 20px;
+      box-sizing: border-box;
+      position: sticky;
+      left: 20px;
+      top: 60px;
+      z-index: 999;
+    }
+
+    .header-content {
+      display: flex;
+      align-items: center;
+    }
+
+    .header h1 {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 1.5em;
+      font-weight: bold;
+      letter-spacing: 1px;
+      margin: 0;
+      margin-left: 10px;
+      color: #FFD700;
+    }
+
+    .header svg {
+      font-size: 2em;
+    }
+
+    .main-content {
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding-top: 20px;
+      box-sizing: border-box;
+      position: relative;
+      z-index: 1;
+    }
+
+    .nav-frame {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      background: rgba(255, 255, 255, 0.05);
+      padding: 5px 20px;
+      box-sizing: border-box;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      justify-content: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      max-width: calc(100vw - 40px); /* Limit width to viewport minus padding */
+      margin: 0 auto; /* Center the frame */
+    }
+
+    .nav-buttons {
+      max-width: 1200px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 0 20px;
+      overflow: visible;
+    }
+
+    .nav-button {
+      min-width: 120px;
+      text-align: center;
+      background-color: rgba(255, 255, 255, 0.05);
+      color: #00D1FF;
+      padding: 10px 20px;
+      margin: 5px;
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 5px;
+      text-decoration: none;
+      cursor: pointer;
+      transition: background-color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+      white-space: nowrap;
+      box-shadow: 0 0 5px rgba(0, 209, 255, 0.3);
+      position: relative;
+    }
+
+    .nav-button:hover {
+      background-color: rgba(255, 255, 255, 0.1);
+      border-color: #00D1FF;
+      box-shadow: 0 2px 8px rgba(0, 209, 255, 0.5);
+    }
+
+    @media (max-width: 768px) {
+      .main-content {
+        padding: 0 5px;
+      }
+      .nav-buttons {
+        padding: 0 10px;
+      }
+    }
