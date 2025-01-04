@@ -18,7 +18,7 @@
       box-sizing: border-box;
       position: sticky;
       left: 20px;
-      top: 60px;
+      top: 20px; /* Set top back to 20px */
       z-index: 999;
     }
 
@@ -73,10 +73,22 @@
       max-width: 1200px;
       width: 100%;
       display: flex;
-      justify-content: center;
+      align-items: center; /* Added align-items: center */
+      justify-content: space-between; /* Changed to space-between */
       gap: 20px;
-      padding: 0 20px;
+      padding: 0 40px;
       overflow: visible;
+    }
+
+    .nav-buttons > div {
+      margin-left: auto; /* Push FullscreenButton to the right */
+      margin-right: 10px;
+    }
+
+    .nav-button-container {
+      display: flex;
+      justify-content: center;
+      flex: 1; /* Added flex: 1 */
     }
 
     .nav-button {
@@ -100,6 +112,10 @@
       background-color: rgba(255, 255, 255, 0.1);
       border-color: #00D1FF;
       box-shadow: 0 2px 8px rgba(0, 209, 255, 0.5);
+    }
+
+    .fixed-elements {
+      margin-top: 0; /* Removed negative margin-top */
     }
 
     @media (max-width: 768px) {

@@ -13,10 +13,12 @@ import React from 'react';
           <div className="fixed-elements">
             <nav className="nav-frame">
               <div className="nav-buttons">
-                <Link to="/bitcoin" className="nav-button">Bitcoin Price</Link>
-                <Link to="/market" className="nav-button">Market Data</Link>
-                <Link to="/calculator" className="nav-button">Crypto Calculator</Link>
-                <Link to="/currency" className="nav-button">Currency Calculator</Link>
+                <div className="nav-button-container">
+                  <Link to="/bitcoin" className="nav-button">Bitcoin Price</Link>
+                  <Link to="/market" className="nav-button">Market Data</Link>
+                  <Link to="/calculator" className="nav-button">Crypto Calculator</Link>
+                  <Link to="/currency" className="nav-button">Currency Calculator</Link>
+                </div>
               </div>
             </nav>
             <Header />

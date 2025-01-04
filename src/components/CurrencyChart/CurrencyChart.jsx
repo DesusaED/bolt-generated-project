@@ -6,6 +6,7 @@ import React, { useState, useEffect, useRef } from 'react';
       const chartContainerRef = useRef(null);
       const [chartData, setChartData] = useState([]);
       const [error, setError] = useState(null);
+      const chartRef = useRef(null);
 
       useEffect(() => {
         const fetchChartData = async () => {
@@ -91,8 +92,14 @@ import React, { useState, useEffect, useRef } from 'react';
           });
 
           candleSeries.setData(chartData);
+          chartRef.current = chart;
 
-          return () => chart.remove();
+          return () => {
+            if (chartRef.current) {
+              chartRef.current.remove();
+              chartRef.current = null;
+            }
+          };
         }
       }, [chartData]);
 

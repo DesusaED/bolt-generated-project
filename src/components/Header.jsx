@@ -2,6 +2,7 @@ import React from 'react';
     import { useLocation } from 'react-router-dom';
     import { FaBitcoin } from 'react-icons/fa';
     import './Header.css';
+    import FullscreenButton from './FullscreenButton/FullscreenButton';
 
     const Header = () => {
       const location = useLocation();
@@ -20,6 +21,7 @@ import React from 'react';
           <div className="header-content">
             <FaBitcoin />
             <h1>{headerText}</h1>
+            <FullscreenButton />
           </div>
         </header>
       );

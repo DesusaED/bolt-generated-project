@@ -25,7 +25,7 @@
       background: rgba(255, 255, 255, 0.1);
       border-radius: 10px;
       padding: 20px;
-      margin-top: 15px;
+      margin-top: 55px; /* Adjusted margin-top to move the box up */
       backdrop-filter: blur(10px);
       border: 1px solid rgba(255, 255, 255, 0.3);
       width: 100%;
