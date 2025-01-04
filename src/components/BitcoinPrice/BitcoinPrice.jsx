@@ -8,14 +8,14 @@ import React, { useState, useEffect } from 'react';
       return new Intl.NumberFormat('en-US').format(num);
     };
 
-    const BitcoinPrice = ({ updateInterval, selectedSymbol }) => {
+    const BitcoinPrice = ({ updateInterval, selectedSymbol, setSelectedSymbol }) => {
       const [price, setPrice] = useState(null);
       const [priceChange, setPriceChange] = useState(null);
       const [low24h, setLow24h] = useState(null);
       const [high24h, setHigh24h] = useState(null);
       const [volume24h, setVolume24h] = useState(null);
       const [marketCap, setMarketCap] = useState(null);
-      const [circulatingSupply, setCirculatingSupply] = useState(null);
+      const [maxSupply, setMaxSupply] = useState(null);
       const [error, setError] = useState(null);
       const [symbolName, setSymbolName] = useState('BTC');
       const [isPopupOpen, setIsPopupOpen] = useState(false);
@@ -50,23 +50,36 @@ import React, { useState, useEffect } from 'react';
                   const totalSupply = symbolInfo.quoteAsset === 'USDT' ? symbolInfo.baseAssetPrecision : symbolInfo.quoteAssetPrecision;
                   const calculatedMarketCap = parseFloat(data.lastPrice) * (10 ** totalSupply);
                   setMarketCap(calculatedMarketCap);
-                  setCirculatingSupply(10 ** totalSupply);
+                  // Set max supply based on symbol
+                  if (selectedSymbol === 'BTCUSDT') {
+                    setMaxSupply(21000000); // Hardcoded max supply for Bitcoin
+                  } else if (selectedSymbol === 'ETHUSDT') {
+                    setMaxSupply(120000000); // Hardcoded max supply for Ethereum
+                  } else if (selectedSymbol === 'DOGEUSDT') {
+                    setMaxSupply(140000000000); // Hardcoded max supply for Dogecoin
+                  } else if (selectedSymbol === 'XRPUSDT') {
+                    setMaxSupply(100000000000); // Hardcoded max supply for XRP
+                  } else if (selectedSymbol === 'APEUSDT') {
+                    setMaxSupply(1000000000); // Hardcoded max supply for APE
+                  } else {
+                    setMaxSupply(10 ** totalSupply); // Use the calculated value for other coins
+                  }
                 } else {
                   console.error('Symbol info not found in exchange info data');
                   setMarketCap(null);
-                  setCirculatingSupply(null);
+                  setMaxSupply(null);
                 }
               } else {
                 console.error(
                   'Failed to fetch exchange info from Binance API', exchangeInfoResponse.status
                 );
                 setMarketCap(null);
-                setCirculatingSupply(null);
+                setMaxSupply(null);
               }
             } catch (error) {
               console.error('Error fetching from Binance API:', error);
               setMarketCap(null);
-              setCirculatingSupply(null);
+              setMaxSupply(null);
             }
 
             setError(null);
@@ -76,7 +89,7 @@ import React, { useState, useEffect } from 'react';
             setError(`Failed to fetch ${selectedSymbol} price`);
             setPrice(0);
             setMarketCap(null);
-            setCirculatingSupply(null);
+            setMaxSupply(null);
           }
         };
 
@@ -146,8 +159,8 @@ import React, { useState, useEffect } from 'react';
                   <span>${volume24h !== null ? formatNumber(volume24h) : 'N/A'}</span>
                 </div>
                 <div className="bitcoin-market-item" style={{ whiteSpace: 'nowrap' }}>
-                  <span>Circulation Supply</span>
-                  <span>{circulatingSupply !== null ? formatNumber(circulatingSupply) : 'N/A'}</span>
+                  <span>Max Supply</span>
+                  <span>{maxSupply !== null ? formatNumber(maxSupply) : 'N/A'}</span>
                 </div>
               </div>
             </div>

@@ -75,15 +75,11 @@ import React, { useState, useEffect, useRef } from 'react';
             </div>
             <div className="info-section">
               <h4>Chart Details</h4>
-              <p>Chart type: Histogram showing volume distribution.</p>
-              <p>Time frame: 1-minute candles over the last 60 minutes.</p>
-              <p>Green bars indicate price increase, red bars indicate price decrease during the period.</p>
+              <p>Histogram showing volume distribution. 1-minute candles over the last 60 minutes. Green bars indicate price increase, red bars indicate price decrease.</p>
             </div>
             <div className="info-section">
               <h4>Update Frequency</h4>
-               <p>Data refreshes every {updateInterval/1000} seconds.</p>
-              <p>Timer settings are adjustable via chart controls.</p>
-              <p>Updates are synchronized with the price chart.</p>
+               <p>Data refreshes every {updateInterval/1000} seconds. Timer settings are adjustable via chart controls. Updates are synchronized with the price chart.</p>
             </div>
           </div>
         </>
